@@ -1,0 +1,25 @@
+//------------------------------
+// Programmer:   Joseph Ybarra
+// Course:       COSC 1336-015
+// Semester:     2019
+// Assignment #: 01b
+// Due Date:     06Feb2019
+//------------------------------
+
+public class Quotes {
+
+	public static void main(String[] args) {
+		
+		System.out.println("To be,");
+		System.out.println(" or not to be,");
+		System.out.println(" that is the question.");
+		System.out.println();
+		System.out.println("Or perhaps,");
+		System.out.println(" I should be asking,");
+		System.out.println(" some other question!");
+		System.out.println();
+		System.out.println("This program was written by Joseph Ybarra");
+		System.out.println("End of program.");
+		
+	}
+}
