@@ -1,0 +1,17 @@
+//------------------------------
+// Programmer:   Joseph Ybarra
+// Course:       COSC 1336-015
+// Semester:     2019
+// Assignment #: 01a
+// Due Date:     06Feb2019
+//------------------------------
+
+public class FirstJavaProgram {
+	public static void main(String[] args) {
+
+		System.out.println("This is my first Java program!");
+		System.out.println();
+		System.out.println("This program was written by Joseph Ybarra");
+		System.out.print("End of program.");
+	}
+}
