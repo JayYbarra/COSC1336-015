@@ -1,0 +1,80 @@
+
+//------------------------------
+// Programmer:   Joseph Ybarra
+// Course:       COSC 1336-015
+// Semester:     2019
+// Assignment #: 02
+// Due Date:     13Feb2019
+//------------------------------
+
+import java.util.Scanner;
+
+public class MoneyConverter {
+
+	public static void main(String[] args) {
+
+		final int TEN_DOLLARS = 1000;
+		final int FIVE_DOLLARS = 500;
+		final int ONE_DOLLAR = 100;
+		final int QUARTER = 25;
+		final int DIME = 10;
+		final int NICKEL = 5;
+		final int HUNDRED = 100;
+
+		int tens, fives, ones, quarters, dimes, nickels, remainingCents;
+
+		float total, twiceAmount, halfAmount, addTwoDollars, subtractOneDollar;
+
+		char dollarSign = '$', cents = 162;
+
+		String prefix = "Mr.", firstName = "Joseph", lastName = "Ybarra";
+
+		Scanner keyboard = new Scanner(System.in);
+
+		System.out.print("Enter monetary amount: ");
+
+		total = keyboard.nextFloat();
+		keyboard.close();
+
+		System.out.println(
+				"\nThe amount of " + dollarSign + total + " is equivalent to " + (int) (total * HUNDRED) + cents);
+
+		twiceAmount = total * 2;
+		halfAmount = total / 2;
+		addTwoDollars = total + 2.0f;
+		subtractOneDollar = total - 1.0f;
+
+		remainingCents = (int) (total * HUNDRED);
+
+		System.out.println("Twice the amount is " + dollarSign + twiceAmount + "!");
+		System.out.println("Half the amount is " + dollarSign + halfAmount + "!");
+		System.out.println("Adding two dollars is " + dollarSign + addTwoDollars + "!");
+		System.out.println("Subtracting one dollar is " + dollarSign + subtractOneDollar + "!\n");
+
+		tens = remainingCents / TEN_DOLLARS;
+		remainingCents %= TEN_DOLLARS;
+
+		fives = remainingCents % TEN_DOLLARS / FIVE_DOLLARS;
+		remainingCents %= FIVE_DOLLARS;
+
+		ones = remainingCents % TEN_DOLLARS % FIVE_DOLLARS / ONE_DOLLAR;
+		remainingCents %= ONE_DOLLAR;
+
+		quarters = remainingCents % TEN_DOLLARS % FIVE_DOLLARS % ONE_DOLLAR / QUARTER;
+		remainingCents %= QUARTER;
+
+		dimes = remainingCents % TEN_DOLLARS % FIVE_DOLLARS % ONE_DOLLAR % QUARTER / DIME;
+		remainingCents %= DIME;
+
+		nickels = remainingCents % TEN_DOLLARS % FIVE_DOLLARS % ONE_DOLLAR % QUARTER % DIME / NICKEL;
+		remainingCents %= NICKEL;
+
+		System.out.println("That's equivalent to:\n\n" + tens + " ten dollar bills\n" + fives + " five dollar bills\n"
+				+ ones + " one dollar bills\n" + quarters + " quarters\n" + dimes + " dimes\n" + nickels + " nickels\n"
+				+ remainingCents + " pennies\n");
+
+		System.out.println("This program was written by " + prefix + " " + firstName + " " + lastName);
+		System.out.print("End of program.");
+
+	}
+}
